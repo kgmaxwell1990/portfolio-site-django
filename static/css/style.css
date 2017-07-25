@@ -1,13 +1,16 @@
-body {
-    background-color: beige;
+.ubuntu {
+    font-family: 'Ubuntu', sans-serif;
 }
 
-h1 {
+.brown {
     color: brown;
 }
+.beige {
+    color: beige;
+}
 
-.pushdown {
-    margin-top: 120px;
+.right {
+    float: right;
 }
 
 .navbar {
@@ -18,10 +21,14 @@ h1 {
 
 .navbar-default .navbar-nav>li>a {
     color: brown;
+    font-size: 20px;
+    font-weight: 900;
 }
 
 .navbar-default .navbar-brand {
     color: brown;
+    font-size: 20px;
+    font-weight: 900;
 }
 
 .container-fluid {
@@ -29,11 +36,42 @@ h1 {
     padding: 0;
 }
 
+.intro-section {
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 15px 15px;
+}
+
+.about-section {
+    background-color: white;
+}
+
+.services-section {
+    background-color: #eee;
+}
+
+.contact-section {
+    background-color: white;
+}
+
+.jumbo > h2 {
+    text-align: left;
+}
+
 .jumbo {
-    /* background-color: gray;
-    height: 400px; */
-    margin-top: 200px;
-    text-align: center;
+    padding-top: 80px;
+}
+
+
+.scroll-button {
+    margin-top: 100px;
+
 }
 
 
