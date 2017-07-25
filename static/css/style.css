@@ -1,5 +1,6 @@
 .ubuntu {
     font-family: 'Ubuntu', sans-serif;
+    text-shadow: 1px 1px 1px black;
 }
 
 .brown {
@@ -9,13 +10,26 @@
     color: beige;
 }
 
+.black_background {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.black_background > p {
+    color: #eee;
+}
+
 .right {
     float: right;
 }
 
+.left {
+    float: left;
+    text-align: left;
+}
+
 .navbar {
     background-image: none;
-    background-color: transparent;
+    background-color: black;
     border: none;
 }
 
@@ -31,13 +45,20 @@
     font-weight: 900;
 }
 
+
+.btn-1:hover {
+    background-color: transparent;
+}
+
+
+
 .container-fluid {
     margin: 0;
     padding: 0;
 }
 
 .intro-section {
-    background:
+    /* background:
     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
     linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
@@ -45,11 +66,16 @@
     linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
     linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
     background-color: #131313;
-    background-size: 15px 15px;
+    background-size: 15px 15px; */
+    /* background-image:  */
 }
 
 .about-section {
-    background-color: white;
+        background: no-repeat center; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
 }
 
 .services-section {
@@ -73,6 +99,14 @@
     margin-top: 100px;
 
 }
+
+.scroll-button > p {
+    font-size: 20px;
+}
+
+
+
+
 
 
 #newpostbutton {

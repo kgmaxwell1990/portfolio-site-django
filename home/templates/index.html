@@ -3,7 +3,7 @@
 
 {% block content %}
 
-    <section id="intro" class="intro-section">
+    <section id="intro" class="intro-section" style="background-image: url('{% static 'images/dark-triangles.png'%}')">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 jumbo">
@@ -23,17 +23,19 @@
     </section>
 
         <!-- About Section -->
-    <section id="about" class="about-section">
+    <section id="about" class="about-section" style="background-image: url('{% static 'images/me.jpg'%}')">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
-                    <h1 class="brown ubuntu">About Section</h1>
+                <div class="col-sm-6 black_background">
+                    <h1 class="brown ubuntu left">About Me</h1>
+                    <p class="left"> {% lorem 1 %}</p>
                 </div>
+
                 <div class="col-sm-12 scroll-button">
-                    <p class="brown ubuntu"> See What I Have Been Working On </p>
+                    <p class="brown ubuntu"> See What I Have Been Doing </p>
                     <a class="page-scroll" href="#my-work"><img src="{% static 'images/downarrow.png' %}" width="50px"/></a>
                 </div>
-                <a class="btn btn-default page-scroll right" href="#page-top">Back To Top</a>
+                <a class="page-scroll right" href="#page-top"><img src="{% static 'images/uparrow.png' %}" width="50px"/></a>
             </div>
         </div>
     </section>
@@ -43,14 +45,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <h1 class="brown ubuntu">Have a look at some of the sites I have been working on </h1>
+                    <h1 class="brown ubuntu">Some Websites I Have Been Working On </h1>
                 </div>
                 <div class="col-sm-12 scroll-button">
 
                     <p class="brown ubuntu"> Connect with Me </p>
                     <a class="page-scroll" href="#connect"><img src="{% static 'images/downarrow.png' %}" width="50px"/></a>
                 </div>
-                <a class="btn btn-default page-scroll right" href="#page-top">Back To Top</a>
+                <a class="page-scroll right" href="#page-top"><img src="{% static 'images/uparrow.png' %}" width="50px"/></a>
                 </div>
         </div>
     </section>
@@ -62,7 +64,7 @@
                 <div class="col-sm-12">
                     <h1 class="brown ubuntu">Connect with Me</h1>
                 </div>
-                <a class="btn btn-default page-scroll right" href="#page-top">Back To Top</a>
+                <a class="page-scroll right" href="#page-top"><img src="{% static 'images/uparrow.png' %}" width="50px"/></a>
             </div>
         </div>
     </section>
