@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'contact',
     'home',
     'blog',
+    'django_forms_bootstrap',
+    'disqus',
+    'django.contrib.sites',
 ]
 
 MIDDLEWARE = [
