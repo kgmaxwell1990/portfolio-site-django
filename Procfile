@@ -1,0 +1,1 @@
+web: gunicorn kgmaxwellportfolio.wsgi:application
