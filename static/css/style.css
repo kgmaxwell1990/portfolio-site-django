@@ -18,16 +18,27 @@
     color: #A9ACA9;
 }
 
+.whitish {
+    color: #eee;
+}
+
 .purpley {
     color: #2B061E;
 }
 
-.upper {
-    text-transform: uppercase;
+.pinkybackground {
+    background-color: rgba(196, 153, 145, 0.8);
+    color: white;
+    border-radius: 40px;
+    padding: 20px;
 }
 
-.black_background {
-    background-color: rgba(0, 0, 0, 0.7);
+.textshadow {
+    text-shadow: 1px 1px 1px black;
+}
+
+.upper {
+    text-transform: uppercase;
 }
 
 .black_background > p {
