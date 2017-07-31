@@ -10,6 +10,10 @@
     color: beige;
 }
 
+.white {
+    color: white;
+}
+
 .pinky {
     color: #C49991;
 }
@@ -41,6 +45,14 @@
     text-transform: uppercase;
 }
 
+.textleft {
+    text-align: left;
+}
+
+.textright {
+    text-align: right;
+}
+
 .black_background > p {
     color: #eee;
 }
@@ -68,7 +80,7 @@
 
 .navbar {
     background-image: none;
-    background-color: #2B061E;
+    background-color: black;
     border: none;
 }
 
@@ -115,8 +127,6 @@ section {
     background-color: #eee;
 }
 
-.contact-section {
-}
 
 .box {
     background-color: black;
@@ -128,12 +138,9 @@ section {
 }
 
 
-.jumbo > h2 {
-    text-align: left;
-}
-
 .jumbo {
     padding-top: 80px;
+    text-align: center;
 }
 
 .scroll-button {
