@@ -4,10 +4,26 @@
 }
 
 .brown {
-    color: brown;
+    color: #230903;
 }
 .beige {
     color: beige;
+}
+
+.pinky {
+    color: #C49991;
+}
+
+.greyish {
+    color: #A9ACA9;
+}
+
+.purpley {
+    color: #2B061E;
+}
+
+.upper {
+    text-transform: uppercase;
 }
 
 .black_background {
@@ -27,20 +43,32 @@
     text-align: left;
 }
 
+.padding20 {
+    padding-top: 20px;
+}
+
+.padding100{
+    padding-top: 100px;
+}
+
+.row {
+    padding: 20px;
+}
+
 .navbar {
     background-image: none;
-    background-color: black;
+    background-color: #2B061E;
     border: none;
 }
 
 .navbar-default .navbar-nav>li>a {
-    color: brown;
+    color: #A9ACA9;
     font-size: 20px;
     font-weight: 900;
 }
 
 .navbar-default .navbar-brand {
-    color: brown;
+    color: #A9ACA9;
     font-size: 20px;
     font-weight: 900;
 }
@@ -61,28 +89,22 @@ section {
 }
 
 .intro-section {
-    /* background:
-    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background-color: #131313;
-    background-size: 15px 15px; */
-    /* background-image:  */
+    background-color: #2B061E;
+}
+
+#portrait {
+    border-radius: 300px;
 }
 
 .about-section {
-        background: no-repeat center; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+    background-color: #A9ACA9;
 }
 
 .services-section {
     background-color: #eee;
+}
+
+.contact-section {
 }
 
 .box {
@@ -94,9 +116,6 @@ section {
     display: block;
 }
 
-.contact-section {
-    background-color: white;
-}
 
 .jumbo > h2 {
     text-align: left;
@@ -106,10 +125,8 @@ section {
     padding-top: 80px;
 }
 
-
 .scroll-button {
-    margin-top: 100px;
-
+    margin-bottom: 3%;
 }
 
 .scroll-button > p {

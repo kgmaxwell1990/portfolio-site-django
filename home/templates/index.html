@@ -228,74 +228,65 @@
         </div>
     </div>
 
-    <section id="intro" class="intro-section" style="background-image: url('{% static 'images/dark-triangles.png'%}')">
-        <div class="container">
+
+<div class="container-fluid">
+    <section id="intro" class="intro-section padding100" >
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="ubuntu upper pinky"> Full Stack Web Developer </h1>
+            </div>
+        </div>
             <div class="row">
-                <div class="col-sm-6 jumbo">
-                    <h2 class="beige ubuntu">Software Developer </h2>
-                    <h2 class="beige ubuntu">Web Design </h2>
-                    <h2 class="beige ubuntu">Digital Marketing</h2>
+                <div class="col-sm-4 jumbo">
+                    <!-- <h2 class="greyish ubuntu">Software Development </h2>
+                    <h2 class="greyish ubuntu">Web Design </h2>
+                    <h2 class="greyish ubuntu">Digital Marketing</h2> -->
                 </div>
-                <div class="col-sm-6">
-                    <img/>
+                <div class="col-sm-4">
+                    <img src="{% static 'images/me2.JPG' %}" width="300px" id="portrait"/>
                 </div>
+                <div class="col-sm-4">
+
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-sm-12 scroll-button">
-                    <p class="beige ubuntu"> Find out More About Me </p>
+                    <p class="greyish ubuntu"> Find out More About Me </p>
                     <a class="page-scroll" href="#about"><img src="{% static 'images/downarrow.png' %}" width="50px"/></a>
                 </div>
             </div>
-        </div>
     </section>
 
         <!-- About Section -->
-    <section id="about" class="about-section" style="background-image: url('{% static 'images/me.jpg'%}')">
-        <div class="container">
+    <section id="about" class="about-section padding20">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="ubuntu upper purpley"> About Me / Key Skills </h1>
+            </div>
+        </div>
             <div class="row">
                 <div class="col-sm-6 black_background">
-                    <h1 class="brown ubuntu left">About Me</h1>
                     <p class="left"> {% lorem 1 %}</p>
                 </div>
-
+                <div class="col-sm-6 black_background">
+                    <p class="left"> {% lorem 1 %}</p>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-sm-12 scroll-button">
-                    <p class="beige ubuntu"> See What I Have Been Doing </p>
+                    <p class="purpley ubuntu"> See What I Have Been Doing </p>
                     <a class="page-scroll" href="#my-work"><img src="{% static 'images/downarrow.png' %}" width="50px"/></a>
                 </div>
                 <a class="page-scroll right" href="#page-top"><img src="{% static 'images/uparrow.png' %}" width="50px"/></a>
             </div>
-        </div>
     </section>
 
-        <!-- Services Section -->
-    {% comment %} <section id="my-work" class="services-section">
-        <div class="container">
-                <div class="col-sm-12">
-                    <h1 class="brown ubuntu">Some Websites I Have Been Working On </h1>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-6">
-                    <div class="box"></div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-6">
-                    <div class="box"></div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-6">
-                    <div class="box"></div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-6">
-                    <div class="box"></div>
-                </div>
-                <div class="col-sm-12 scroll-button">
-                    <p class="brown ubuntu"> Connect with Me </p>
-                    <a class="page-scroll" href="#connect"><img src="{% static 'images/downarrow.png' %}" width="50px"/></a>
-                </div>
-                <a class="page-scroll right" href="#page-top"><img src="{% static 'images/uparrow.png' %}" width="50px"/></a>
-        </div>
-    </section> {% endcomment %}
         <!-- Portfolio Grid Section -->
-    <section id="my-work" class="services-section">
+    <section id="my-work" class="services-section padding20">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h1 class="brown ubuntu">My Work</h1>
+                    <h1 class="brown ubuntu upper">My Work</h1>
                 </div>
             </div>
             <div class="row">
@@ -317,7 +308,9 @@
                     </a>
                     <p class="brown ubuntu"> Wedding Site</p>
                 </div>
-                {% comment %} <div class="col-sm-4 portfolio-item">
+            </div>
+            <!-- <div class="row">
+                <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                     <img src="{% static "images/urbansurf.png" %}" class="img-responsive card" alt="ubransurf">
                     </a>
@@ -334,31 +327,34 @@
                     <img src="{% static "images/wedding.png" %}" class="img-responsive card" alt="ubransurf">
                     </a>
                     <p class="brown ubuntu"> Wedding Site</p>
-                </div> {% endcomment %}
+                </div>
+            </div> -->
+            <div class="row">
                 <div class="col-sm-12 scroll-button">
                     <p class="brown ubuntu"> Connect with Me </p>
                     <a class="page-scroll" href="#connect"><img src="{% static 'images/downarrow.png' %}" width="50px"/></a>
                 </div>
                 <a class="page-scroll right" href="#page-top"><img src="{% static 'images/uparrow.png' %}" width="50px"/></a>
-
             </div>
+            
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="connect" class="contact-section">
-        <div class="container">
+    <section id="connect" class="contact-section padding20" style="background-image: url('{% static 'images/dark-triangles.png'%}')">
+        <div class="row">
                 <div class="col-sm-12">
-                    <h1 class="brown ubuntu">Connect with Me</h1>
+                    <h1 class="pinky ubuntu upper">Connect with Me</h1>
                 </div>
                 <div class="col-sm-12">
                     <i class="fa fa-facebook"></i>
                     <i class="fa fa-twitter"></i>
                     <i class="fa fa-instagram"></i>
                 </div>
-                <p><a class="page-scroll right" href="#page-top"><img src="{% static 'images/uparrow.png' %}" width="50px"/></a></p>
+                <a class="page-scroll right" href="#page-top"><img src="{% static 'images/uparrow.png' %}" width="50px"/></a>
         </div>
     </section>
+</div>
 
 
 
