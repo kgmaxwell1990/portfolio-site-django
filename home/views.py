@@ -5,6 +5,7 @@ from django.template import Context
 from django.template.loader import get_template
 from .forms import ContactForm
 from django.core.mail import send_mail
+from django.contrib import messages, auth
 
 
 # Create your views here.
@@ -22,23 +23,24 @@ def contact(request):
             contact_email = request.POST.get('contact_email', '')
             form_content = request.POST.get('content', '')
 
-            # template=get_template('contact_template.txt')
-            # context = {
-            #     'contact_name': contact_name,
-            #     'contact_email': contact_email,
-            #     'form_content': form_content,
-            # }
-            # content = template.render(context)
-            subject = 'Site Contact Form'
-            contact_message = (contact_name, contact_email, form_content)
-            from_email = settings.EMAIL_HOST_USER
-            to_email = [from_email, 'anotheremail@gmail.com']
+            template=get_template('contact_template.txt')
+            context = {
+                'contact_name': contact_name,
+                'contact_email': contact_email,
+                'form_content': form_content,
+            }
+            content = template.render(context)
+            
+            # subject = 'Site Contact Form'
+            # contact_message = (contact_name, contact_email, form_content)
+            # from_email = settings.EMAIL_HOST_USER
+            # to_email = [from_email, 'anotheremail@gmail.com']
 
-            send_mail(subject, 
-                    contact_message, 
-                    from_email, 
-                    to_email,
-                    fail_silently=False)
+            # send_mail(subject, 
+            #         contact_message, 
+            #         from_email, 
+            #         to_email,
+            #         fail_silently=False)
 
             email = EmailMessage(
                 "New contact form submission",
@@ -48,7 +50,8 @@ def contact(request):
                 headers = {'Reply-To': contact_email }
             )
             email.send()
-            return redirect('contact')
+            messages.success(request, 'I have received your email & will get back to you ASAP! :)')
+            return redirect('index')
 
     return render(request, 'contact.html', {
         'form': form_class,

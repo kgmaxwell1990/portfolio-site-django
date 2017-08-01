@@ -13,4 +13,4 @@ class ContactForm(forms.Form):
         super(ContactForm, self).__init__(*args, **kwargs)
         self.fields['contact_name'].label = "Name:"
         self.fields['contact_email'].label = "Email:"
-        self.fields['content'].label = "Comment"
+        self.fields['content'].label = "Comment:"
