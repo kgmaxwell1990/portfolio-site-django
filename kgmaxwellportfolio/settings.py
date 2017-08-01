@@ -29,6 +29,13 @@ DEBUG = os.environ.get('DEBUG', False)
 ALLOWED_HOSTS = ['katie-dev-portfolio.herokuapp.com', '127.0.0.1']
 INTERNAL_IPS = ['127.0.0.1']
 
+EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend' 
+DEFAULT_FROM_EMAIL='testing@example.com'
+EMAIL_HOST_USER=''
+EMAIL_HOST_PASSWORD=''
+EMAIL_USE_TLS=False 
+EMAIL_PORT=1025
+
 
 # Application definition
 
@@ -39,12 +46,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home',
-    'blog',
     'django_forms_bootstrap',
     'disqus',
     'django.contrib.sites',
     'storages',
+    'home',
+    'blog',
 ]
 
 MIDDLEWARE = [
