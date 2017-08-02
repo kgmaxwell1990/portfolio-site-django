@@ -1,5 +1,5 @@
  $(document).ready(function () {
 
-  $(".jumbo").hide(0).fadeIn(9000);
+//   $(".jumbo").hide(0).fadeIn(9000);
 
  });

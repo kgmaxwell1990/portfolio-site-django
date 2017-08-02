@@ -3,12 +3,20 @@ h1 {
 }
 
 .pushdown {
-    margin-top: 90px;
+    margin-top: 20px;
 }
 
 .ubuntu {
     font-family: 'Ubuntu', sans-serif;
     text-shadow: 1px 1px 1px black;
+}
+
+.bungee {
+    font-family: 'Bungee Inline', cursive;
+}
+
+.megrim {
+    font-family: 'Megrim', cursive;
 }
 
 .brown {
@@ -93,9 +101,15 @@ h1 {
 
 .navbar {
     background-image: none;
-    background-color: black;
+    background-color: #2B061E;
     border: none;
 }
+
+#page-top > div > nav {
+    padding: 0;
+    background-color: black;
+}
+
 
 .navbar-default .navbar-nav>li>a {
     color: #A9ACA9;
@@ -110,8 +124,34 @@ h1 {
 }
 
 
-.btn-1:hover {
-    background-color: transparent;
+a:hover { 
+    background-color: transparent !important; 
+}
+
+a:focus {
+    background-color: transparent !important; 
+}
+
+
+.lineeffect {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.lineeffect::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    border-radius: 5px;
+    background: white;
+    transition: width 0.5s ease-in-out;
+}
+
+.lineeffect:hover::after {
+    width: 100%;
 }
 
 
@@ -137,7 +177,11 @@ section {
 }
 
 .services-section {
-    background-color: #A9ACA9;
+    background-color: #2B061E;
+}
+
+.contact-section {
+    background-color: #eee;
 }
 
 
@@ -154,6 +198,52 @@ section {
 .jumbo {
     padding-top: 80px;
     text-align: center;
+}
+
+.jumbo > h2 {
+    color: white;
+    font-family: 'Megrim', cursive;
+}
+
+.zoomIn {
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+  /* -webkit-animation-iteration-count: infinite; */
+}
+
+.zoomInDown {
+      -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+}
+
+.first {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+}
+
+.second {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 2s;
+}
+
+.third {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 3s;
+}
+
+.fourth {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 4s;
+}
+
+.fifth {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 5s;
+}
+
+.sixth {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 6s;
 }
 
 .scroll-button {
