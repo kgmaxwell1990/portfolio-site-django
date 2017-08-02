@@ -5,155 +5,129 @@
 
 
 <!-- Portfolio Modals -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Ecommerce/Blog built with DJango</h2>
-                            <hr class="star-primary">
-                            <img src="{% static "images/urbansurf.png" %}" class="img-responsive img-centered" alt="">
-                            <p>This project was built using Pythons Django Framework blabla</p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Flask / JavaScripts D3 / Mongo</h2>
-                            <hr class="star-primary">
-                            <img src="{% static "images/species.png" %}" class="img-responsive img-centered" alt="">
-                            <p>This data visulisation project used Python's Flask framework with Mongo & Javascripts D3 library</p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Static Site</h2>
-                            <hr class="star-primary">
-                            <img src="{% static "images/wedding.png" %}" class="img-responsive img-centered" alt="">
-                            <p>This static site was built using HTML, CSS & JavaScript</p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Ecommerce/Blog built with DJango</h2>
-                            <hr class="star-primary">
-                            <img src="{% static "images/urbansurf.png" %}" class="img-responsive img-centered" alt="">
-                            <p>This project was built using Pythons Django Framework blabla</p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- 1 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title purpley ubuntu">Ecommerce/Blog built with Django</h4>
         </div>
+        <div class="modal-body">
+          <img src="{% static "images/urbansurf.png" %}" class="img-responsive img-centered" alt="ecomsite">
+          <div class="modalinfo">
+            <p>This website was the final project of the bootcamp - it is almost finished, just a few little
+                tweaks to make. It is a full stack project using Python's Django framework with a mongo 
+                database. It is deployed on Heroku using a Postgres database & Amazon AWS S3 for the 
+                static files.
+            </p>
+            <p> The GitHub Repo can be found <a class="pinky hvr-grow" href="https://github.com/kgmaxwell1990/urban-surf" target="_blank">Here</a>
+            <p> The deployed version can be found <a class="pinky hvr-grow" href="https://katie-dev-urban-surf.herokuapp.com/" target="_blank">Here</a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
     </div>
+  </div>
 
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Ecommerce/Blog built with DJango</h2>
-                            <hr class="star-primary">
-                            <img src="{% static "images/urbansurf.png" %}" class="img-responsive img-centered" alt="">
-                            <p>This project was built using Pythons Django Framework blabla</p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- 2 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Flask / JavaScripts D3 / Mongo</h4>
         </div>
+        <div class="modal-body">
+          <img src="{% static "images/species.png" %}" class="img-responsive img-centered" alt="dashboard">
+          <div class="modalinfo">
+            <p>This is data visualisation website using Python's Flask framework, Mongo database and JavaScript's 
+                D3 library. It is not completed yet.
+            </p>
+            <p> The GitHub Repo can be found <a class="pinky hvr-grow" href="https://github.com/kgmaxwell1990/threatened-species-dashboard" target="_blank">Here</a>
+            <p> The deployed version can be found <a class="pinky hvr-grow" href="http://katie-dev-species-dash.herokuapp.com/" target="_blank">Here</a>
+          </div>        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
     </div>
+  </div>
 
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Ecommerce/Blog built with DJango</h2>
-                            <hr class="star-primary">
-                            <img src="{% static "images/urbansurf.png" %}" class="img-responsive img-centered" alt="">
-                            <p>This project was built using Pythons Django Framework blabla</p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+<!-- 3 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal3" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Static Site</h4>
         </div>
-    </div> -->
+        <div class="modal-body">
+          <img src="{% static "images/wedding.png" %}" class="img-responsive img-centered" alt="staticsite">
+          <div class="modalinfo">
+            <p>This was the first project of the course & is a static site using HTML, CSS & JavaScript as well 
+                as JavaScript's library JQuery
+            </p>
+            <p> The GitHub Repo can be found <a class="pinky hvr-grow" href="https://github.com/kgmaxwell1990/Old-Court-Chapel-Weddings" target="_blank">Here</a>
+            {% comment %} <p> The deployed version can be found <a class="pinky hvr-grow" href="http://katie-dev-species-dash.herokuapp.com/" target="_blank">Here</a> {% endcomment %}
+          </div>        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 
+<!-- 4 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal4" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Personal Portfolio site built with Django</h4>
+        </div>
+        <div class="modal-body">
+          <img src="{% static "images/thissite.png" %}" class="img-responsive img-centered" alt="thissite">
+          <div class="modalinfo">
+            <p>This site was built using Python's Django framework
+            </p>
+            <p> The GitHub Repo can be found <a class="pinky hvr-grow" href="https://github.com/kgmaxwell1990/portfolio-site" target="_blank">Here</a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+<!-- End Portfolio Modals -->
 
     <section id="intro" class="intro-section padding100" >
         <div class="row">
             <div class="col-sm-12 animated zoomInDown">
                 <h1 class="bungee upper pinky"> Full Stack Web Developer </h1>
-                <a href="https://www.linkedin.com/in/katie-maxwell-254826a4/" target="_blank"><img src="{% static 'images/Linkedin.png' %}" width="60px"/></a>
-                <a href="https://github.com/kgmaxwell1990" target="_blank"><img src="{% static 'images/Github.png' %}" width="60px"/></a>
+                <a class="hvr-grow" href="https://www.linkedin.com/in/katie-maxwell-254826a4/" target="_blank"><img src="{% static 'images/Linkedin.png' %}" width="60px"/></a>
+                <a class="hvr-grow" href="https://github.com/kgmaxwell1990" target="_blank"><img src="{% static 'images/Github.png' %}" width="60px"/></a>
             </div>
         </div>
             <div class="row">
@@ -181,7 +155,7 @@
             <div class="row">
                 <div class="col-sm-12 scroll-button">
                     <p class="greyish ubuntu"> Find out More About Me </p>
-                    <a class="page-scroll" href="#about"><img src="{% static 'images/downarrow.png' %}" width="50px"/></a>
+                    <a class="page-scroll hvr-pulse" href="#about"><img src="{% static 'images/downarrow.png' %}" width="50px"/></a>
                 </div>
             </div>
     </section>
@@ -190,58 +164,59 @@
     <section id="about" class="about-section padding100">
         <div class="row">
             <div class="col-sm-12">
-                <h1 class="bungee upper purpley"> About Me / Key Skills </h1>
+                <h1 class="bungee upper purpley"> About Me</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12 textcentre">
-                <p class="whitish textshadow greybackground"> Hi! My name is Katie. I have recently finished the
-                    Code Institute's 12 week intense bootcamp in Software Development!</br>
+                <p> Hi! My name is Katie. I have recently finished the
+                    Code Institute's bootcamp in Software Development! I am currently free
+                    to do some freelance work while looking for a junior developer position.</br>
                     I came from a Sales/Marketing background but found my passion developing Websites last
                     year & haven't stopped coding since!</br>
-                    The Bootcamp taught me so much in 12 weeks - see just a few of the projects I completed 
-                    over that time <a class="page-scroll purpley" href="#my-work">HERE</a></br>
-                    <a class="purpley" href="https://www.linkedin.com/in/katie-maxwell-254826a4/">View my Linkedin profile</a>
-                    <a href="https://www.linkedin.com/in/katie-maxwell-254826a4/" target="_blank"><img src="{% static 'images/Linkedin.png' %}" width="30px"/></a></br>
-                    <a class="purpley" href="https://github.com/kgmaxwell1990">View all my Repos on GitHub</a>
-                    <a href="https://github.com/kgmaxwell1990" target="_blank"><img src="{% static 'images/Github.png' %}" width="30px"/></a></br>
-                    <a href="{% static 'Katie_Maxwell_Resume_pdf.pdf' %}" download target="_blank" class="purpley">Download Resume Here (pdf)</a></br>
+                    The Bootcamp taught me so much - see just a few of the projects I completed 
+                    over that time <a class="page-scroll pinky hvr-pulse" href="#my-work">HERE</a></br>
                 </p>
+                <div class="links">
+                    <p><a class="pinky hvr-grow" href="https://www.linkedin.com/in/katie-maxwell-254826a4/">View my Linkedin profile</a></p>
+                    <p><a class="pinky hvr-grow" href="https://github.com/kgmaxwell1990">View all my Repos on GitHub</a></p>
+                    <p><a href="{% static 'Katie_Maxwell_Resume_pdf.pdf' %}" download target="_blank" class="pinky hvr-grow">Download Resume (pdf)</a></p>
+                </div>
 
             </div>
         </div>
         <div class="row ">
             <div class="col-sm-12 textcentre">
-                <p class="whitish textshadow greybackground"> Here are the skills I have learned so far: </br>
-                    • Establishing the purpose of the website based upon its target audience.</br>
-                    • Creating user friendly Front end projects using HTML, CSS and JavaScript as well as jQuery for animation</br>
-                    • Using bootstrap for effective and appealing web layouts that are fully responsive</br>
-                    • Building projects using Angular2 framework that connect with Twitter and Spotify API’s</br>
-                    • Data Visualisation using JavaScript library d3 for the front end and mongo back end with Python’s Flask framework</br>
-                    • Creating full stack projects using Python’s Django framework</br>
-                    • Creating apps in Django for back end website authentication</br>
+                <h2 class="bungee purpley">Key Skills </h2>
+                <p> Establishing the purpose of the website based upon its target audience.</br>
+                    Creating user friendly Front end projects using HTML, CSS and JavaScript as well as jQuery for animation</br>
+                    Using bootstrap for effective and appealing web layouts that are fully responsive</br>
+                    Building projects using Angular2 framework that connect with Twitter and Spotify API’s</br>
+                    Data Visualisation using JavaScript library d3 for the front end and mongo back end with Python’s Flask framework</br>
+                    Creating full stack projects using Python’s Django framework</br>
+                    Creating apps in Django for back end website authentication</br>
                     for user registration, login and logout etc, Stripe payments,
                     and creating blogs with staff-only access</br>
-                    • Testing a website & identifying bugs/technical problems.</br>
-                    • Data creation, modification and selection using MySQL</br>
-                    • Deployment to Heroku online server, including using Heroku
+                    Testing a website & identifying bugs/technical problems.</br>
+                    Data creation, modification and selection using MySQL</br>
+                    Deployment to Heroku online server, including using Heroku
                     Postgres database and Amazon AWS for static files.</br>
-                    • Version control with Git and repository hosting with GitHub
+                    Version control with Git and repository hosting with GitHub
                 </p>
             </div>
         </div>
             <div class="row">
                 <div class="col-sm-12 scroll-button">
-                    <p class="purpley ubuntu"> See What I Have Been Doing </p>
-                    <a class="page-scroll" href="#my-work"><img src="{% static 'images/downarrow.png' %}" width="50px"/></a>
+                    <p class="purpley ubuntu"> See What I Have Been Building </p>
+                    <a class="page-scroll hvr-pulse" href="#my-work"><img src="{% static 'images/downarrow.png' %}" width="50px"/></a>
                 </div>
-                <a class="page-scroll right" href="#page-top"><img src="{% static 'images/uparrow.png' %}" width="50px"/></a>
+                <a class="page-scroll right hvr-grow" href="#page-top"><img src="{% static 'images/uparrow.png' %}" width="50px"/></a>
             </div>
     </section>
 
         <!-- Portfolio Grid Section -->
     <section id="my-work" class="services-section padding100">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h1 class="pinky bungee upper">My Work</h1>
@@ -250,31 +225,31 @@
             <div class="row">
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                    <img src="{% static "images/urbansurf.png" %}" class="img-responsive card" alt="ubransurf">
+                    <img src="{% static "images/urbansurf.png" %}" class="img-responsive card" alt="ecomsite"/>
                     </a>
-                    <p class="brown ubuntu"> Urban Surf</p>
+                    <p class="greyish ubuntu"> Ecommerce Site with Blog</p>
                 </div>
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                    <img src="{% static "images/species.png" %}" class="img-responsive card" alt="ubransurf">
+                    <img src="{% static "images/species.png" %}" class="img-responsive card" alt="dashboardsite"/>
                     </a>
-                    <p class="brown ubuntu"> Dashboard</p>
+                    <p class="greyish ubuntu"> Data Visualisation</p>
                 </div>
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                    <img src="{% static "images/wedding.png" %}" class="img-responsive card" alt="ubransurf">
+                    <img src="{% static "images/wedding.png" %}" class="img-responsive card" alt="weddingsite"/>
                     </a>
-                    <p class="brown ubuntu"> Wedding Site</p>
+                    <p class="greyish ubuntu"> Static Site</p>
                 </div>
             </div>
-            <!-- <div class="row">
+            <div class="row">
                 <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                    <img src="{% static "images/urbansurf.png" %}" class="img-responsive card" alt="ubransurf">
+                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                    <img src="{% static "images/thissite.png" %}" class="img-responsive card" alt="thissite">
                     </a>
-                    <p class="brown ubuntu"> Urban Surf</p>
+                    <p class="greyish ubuntu"> This Site</p>
                 </div>
-                <div class="col-sm-4 portfolio-item">
+                {% comment %} <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                     <img src="{% static "images/species.png" %}" class="img-responsive card" alt="ubransurf">
                     </a>
@@ -286,13 +261,13 @@
                     </a>
                     <p class="brown ubuntu"> Wedding Site</p>
                 </div>
-            </div> -->
+            </div> {% endcomment %}
             <div class="row">
                 <div class="col-sm-12 scroll-button">
-                    <p class="brown"> Connect with Me </p>
-                    <a class="page-scroll" href="#connect"><img src="{% static 'images/downarrow.png' %}" width="50px"/></a>
+                    <p class="greyish"> Connect with Me </p>
+                    <a class="page-scroll hvr-pulse" href="#connect"><img src="{% static 'images/downarrow.png' %}" width="50px"/></a>
                 </div>
-                <a class="page-scroll right" href="#page-top"><img src="{% static 'images/uparrow.png' %}" width="50px"/></a>
+                <a class="page-scroll right hvr-grow" href="#page-top"><img src="{% static 'images/uparrow.png' %}" width="50px"/></a>
             </div>
             
         </div>
