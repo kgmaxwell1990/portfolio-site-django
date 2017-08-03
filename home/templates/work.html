@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+
+{% block content %}
+
+
+<!-- Portfolio Modals -->
+
+<!-- 1 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title purpley ubuntu">Ecommerce/Blog built with Django</h4>
+        </div>
+        <div class="modal-body">
+          <img src="{% static "images/urbansurf.png" %}" class="img-responsive img-centered" alt="ecomsite">
+          <div class="modalinfo">
+            <p>This website was the final project of the bootcamp - it is almost finished, just a few little
+                tweaks to make. It is a full stack project using Python's Django framework with a mongo 
+                database. It is deployed on Heroku using a Postgres database & Amazon AWS S3 for the 
+                static files.
+            </p>
+            <p> The GitHub Repo can be found <a class="pinky hvr-grow" href="https://github.com/kgmaxwell1990/urban-surf" target="_blank">Here</a>
+            <p> The deployed version can be found <a class="pinky hvr-grow" href="https://katie-dev-urban-surf.herokuapp.com/" target="_blank">Here</a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+<!-- 2 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title purpley ubuntu">Flask / JavaScripts D3 / Mongo</h4>
+        </div>
+        <div class="modal-body">
+          <img src="{% static "images/species.png" %}" class="img-responsive img-centered" alt="dashboard">
+          <div class="modalinfo">
+            <p>This is data visualisation website using Python's Flask framework, Mongo database and JavaScript's 
+                D3 library. It is not completed yet.
+            </p>
+            <p> The GitHub Repo can be found <a class="pinky hvr-grow" href="https://github.com/kgmaxwell1990/threatened-species-dashboard" target="_blank">Here</a>
+            <p> The deployed version can be found <a class="pinky hvr-grow" href="http://katie-dev-species-dash.herokuapp.com/" target="_blank">Here</a>
+          </div>        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+<!-- 3 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal3" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title purpley ubuntu">Static Site</h4>
+        </div>
+        <div class="modal-body">
+          <img src="{% static "images/wedding.png" %}" class="img-responsive img-centered" alt="staticsite">
+          <div class="modalinfo">
+            <p>This was the first project of the course & is a static site using HTML, CSS & JavaScript as well 
+                as JavaScript's library JQuery
+            </p>
+            <p> The GitHub Repo can be found <a class="pinky hvr-grow" href="https://github.com/kgmaxwell1990/Old-Court-Chapel-Weddings" target="_blank">Here</a>
+            {% comment %} <p> The deployed version can be found <a class="pinky hvr-grow" href="http://katie-dev-species-dash.herokuapp.com/" target="_blank">Here</a> {% endcomment %}
+          </div>        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+<!-- 4 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal4" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title purpley ubuntu">Personal Portfolio site built with Django</h4>
+        </div>
+        <div class="modal-body">
+          <img src="{% static "images/thissite.png" %}" class="img-responsive img-centered" alt="thissite">
+          <div class="modalinfo">
+            <p>This site was built using Python's Django framework
+            </p>
+            <p> The GitHub Repo can be found <a class="pinky hvr-grow" href="https://github.com/kgmaxwell1990/portfolio-site" target="_blank">Here</a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+
+<!-- Portfolio Grid Section -->
+    <section id="my-work" class="services-section padding100">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="pinky bungee upper">My Work</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <img src="{% static "images/urbansurf.png" %}" class="img-responsive card" alt="ecomsite"/>
+                    </a>
+                    <p class="greyish ubuntu"> Ecommerce Site with Blog</p>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <img src="{% static "images/species.png" %}" class="img-responsive card" alt="dashboardsite"/>
+                    </a>
+                    <p class="greyish ubuntu"> Data Visualisation</p>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                    <img src="{% static "images/wedding.png" %}" class="img-responsive card" alt="weddingsite"/>
+                    </a>
+                    <p class="greyish ubuntu"> Static Site</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                    <img src="{% static "images/thissite.png" %}" class="img-responsive card" alt="thissite">
+                    </a>
+                    <p class="greyish ubuntu"> This Site</p>
+                </div>
+                {% comment %} <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <img src="{% static "images/species.png" %}" class="img-responsive card" alt="ubransurf">
+                    </a>
+                    <p class="brown ubuntu"> Dashboard</p>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <img src="{% static "images/wedding.png" %}" class="img-responsive card" alt="ubransurf">
+                    </a>
+                    <p class="brown ubuntu"> Wedding Site</p>
+                </div>
+            </div> {% endcomment %}
+            <div class="row">
+                <div class="col-sm-12 scroll-button">
+                    <p class="greyish"> Contact Me </p>
+                    <a class="page-scroll hvr-pulse" href="{% url 'contact' %}"><img src="{% static 'images/downarrow.png' %}" width="50px"/></a>
+                </div>
+                <a class="page-scroll right hvr-grow" href="{% url 'index' %}"><img src="{% static 'images/uparrow.png' %}" width="50px"/>Home</a>
+            </div>
+            
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+{% endblock content %}

@@ -12,6 +12,9 @@ from django.contrib import messages, auth
 def get_index(request):
     return render(request, 'index.html')
 
+def my_work(request):
+    return render(request, 'work.html')
+
 def contact(request):
     form_class = ContactForm
 
