@@ -1,10 +1,9 @@
 from django.conf import settings
 from django.shortcuts import redirect, render, get_object_or_404
-from django.core.mail import EmailMessage
+from django.core.mail import EmailMessage, send_mail
 from django.template import Context
 from django.template.loader import get_template
 from .forms import ContactForm
-from django.core.mail import send_mail
 from django.contrib import messages, auth
 
 
@@ -34,22 +33,18 @@ def contact(request):
             }
             content = template.render(context)
             
-            # subject = 'Site Contact Form'
-            # contact_message = (contact_name, contact_email, form_content)
-            # from_email = settings.EMAIL_HOST_USER
-            # to_email = [from_email, 'anotheremail@gmail.com']
+            subject = 'Thanks for getting in touch!'
+            message = 'Will get back to you asap'
+            from_email = settings.EMAIL_HOST_USER
+            to_email = [contact_email]
 
-            # send_mail(subject, 
-            #         contact_message, 
-            #         from_email, 
-            #         to_email,
-            #         fail_silently=False)
+            send_mail(subject,message,from_email,to_email,fail_silently=True)
 
             email = EmailMessage(
-                "New contact form submission",
+                "New contact form message",
                 content,
                 "Your website" +'',
-                ['youremail@gmail.com'],
+                ['kgmaxwell1990@gmail.com'],
                 headers = {'Reply-To': contact_email }
             )
             email.send()

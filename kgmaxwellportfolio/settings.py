@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 import dj_database_url
+from .email_info import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -29,19 +30,34 @@ DEBUG = os.environ.get('DEBUG', False)
 ALLOWED_HOSTS = ['katie-dev-portfolio.herokuapp.com', '127.0.0.1']
 INTERNAL_IPS = ['127.0.0.1']
 
-EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend' 
-DEFAULT_FROM_EMAIL='testing@example.com'
-EMAIL_HOST_USER=''
-EMAIL_HOST_PASSWORD=''
-EMAIL_USE_TLS=False 
-EMAIL_PORT=1025
+
+#console
+# EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend' 
+# DEFAULT_FROM_EMAIL='testing@example.com'
+# EMAIL_HOST_USER=''
+# EMAIL_HOST_PASSWORD=''
+# EMAIL_USE_TLS=False 
+# EMAIL_PORT=1025
 
 
+
+#gmail
+EMAIL_USE_TLS = EMAIL_USE_TLS       
+EMAIL_HOST = EMAIL_HOST      
+EMAIL_PORT = EMAIL_PORT      
+EMAIL_HOST_USER = EMAIL_HOST_USER       
+EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD     
+# DEFAULT_FROM_EMAIL = 'NOREPLY@shotbymatt.com'   
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+
+#sendgrid
 # EMAIL_HOST = 'smtp.sendgrid.net'
-# EMAIL_HOST_USER = os.environ.get('sendgrid_username')
-# EMAIL_HOST_PASSWORD = os.environ.get('sendgrid_password')
+# EMAIL_HOST_USER = os.environ.get('SENDGRID_USERNAME')
+# EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_PASSWORD')
 # EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
+
 
 
 # Application definition
