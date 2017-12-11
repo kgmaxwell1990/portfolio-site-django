@@ -26,11 +26,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', False)
 
-ALLOWED_HOSTS = ['katie-dev-portfolio.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['katie-dev-portfolio.herokuapp.com', '127.0.0.1', 'www.kgmaxwell.com', 'www.kgmaxwell.com.herokudns.com']
 INTERNAL_IPS = ['127.0.0.1']
 
 
-#console
+# console
 # EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend' 
 # DEFAULT_FROM_EMAIL='testing@example.com'
 # EMAIL_HOST_USER=''
@@ -46,7 +46,6 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587     
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')     
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')  
-# DEFAULT_FROM_EMAIL = 'NOREPLY@shotbymatt.com'   
 #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 

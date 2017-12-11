@@ -119,6 +119,32 @@
     </div>
   </div>
 
+<!-- 5 -->
+<div class="portfolio-modal modal fade" id="portfolioModal5" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title purpley ubuntu">Wedding Venue site built with Django</h4>
+        </div>
+        <div class="modal-body">
+          <img src="{% static "images/occw.png" %}" class="img-responsive img-centered" alt="thissite">
+          <div class="modalinfo">
+            <p>This site was built using Python's Django framework
+            </p>
+            <p> The GitHub Repo can be found <a class="pinky hvr-grow" href="https://github.com/kgmaxwell1990/portfolio-site" target="_blank">Here</a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
 
 
 <!-- Portfolio Grid Section -->
@@ -131,6 +157,14 @@
             </div>
             <div class="row">
                 <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                    <img src="{% static "images/occw.png" %}" class="img-responsive card" alt="oldcourtchapelweddings">
+                    </a>
+                    <h5 class="greyish ubuntu">Wedding Venue Site</h5>
+                    <p>Built with Django <br> Hosted on Heroku <br> Database: Heroku Postgres <br> Static files: AWS S3</p>
+                    
+                </div>
+                <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                     <img src="{% static "images/urbansurf.png" %}" class="img-responsive card" alt="ecomsite"/>
                     </a>
@@ -142,26 +176,24 @@
                     </a>
                     <p class="greyish ubuntu"> Data Visualisation</p>
                 </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                    <img src="{% static "images/wedding.png" %}" class="img-responsive card" alt="weddingsite"/>
-                    </a>
-                    <p class="greyish ubuntu"> Static Site</p>
-                </div>
+
             </div>
             <div class="row">
+
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
                     <img src="{% static "images/thissite.png" %}" class="img-responsive card" alt="thissite">
                     </a>
                     <p class="greyish ubuntu"> This Site</p>
                 </div>
-                {% comment %} <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                    <img src="{% static "images/species.png" %}" class="img-responsive card" alt="ubransurf">
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                    <img src="{% static "images/wedding.png" %}" class="img-responsive card" alt="weddingsite"/>
                     </a>
-                    <p class="brown ubuntu"> Dashboard</p>
+                    <p class="greyish ubuntu"> Static Wedding Venue Site</p>
                 </div>
+
+                {% comment %} 
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                     <img src="{% static "images/wedding.png" %}" class="img-responsive card" alt="ubransurf">
