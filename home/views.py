@@ -8,13 +8,8 @@ from django.contrib import messages, auth
 
 
 # Create your views here.
+
 def get_index(request):
-    return render(request, 'index.html')
-
-def my_work(request):
-    return render(request, 'work.html')
-
-def contact(request):
     form_class = ContactForm
 
     if request.method == 'POST':
@@ -51,9 +46,7 @@ def contact(request):
             messages.success(request, 'I have received your email & will get back to you ASAP! :)')
             return redirect('index')
 
-    return render(request, 'contact.html', {
-        'form': form_class,
-    })
+    return render(request, 'index.html', {'form': form_class})
 
 
 

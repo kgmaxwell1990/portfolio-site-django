@@ -1,96 +1,332 @@
 {% extends 'base.html' %}
 {% load static from staticfiles %}
+{% load bootstrap_tags %}
 
 {% block content %}
 
+<!-- Portfolio Modals -->
 
-
-    <section id="intro" class="intro-section padding100" >
-        <div class="row">
-            <div class="col-sm-12 animated zoomInDown">
-                <h1 class="bungee upper pinky"> Full Stack Web Developer </h1>
-                <a class="hvr-grow" href="https://www.linkedin.com/in/katie-maxwell-254826a4/" target="_blank"><img src="{% static 'images/Linkedin.png' %}" width="60px"/></a>
-                <a class="hvr-grow" href="https://github.com/kgmaxwell1990" target="_blank"><img src="{% static 'images/Github.png' %}" width="60px"/></a>
-            </div>
+<!-- 1 -->
+<div class="portfolio-modal modal fade" id="portfolioModal1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title purpley ubuntu">Ecommerce/Blog built with Django</h4>
         </div>
-            <div class="row">
-                <div class="col-sm-4 jumbo textleft">
-                    <h2 class="animated fadeInLeftBig first">HTML </h2>
-                    <h2 class="animated fadeInLeftBig second">CSS </h2>
-                    <h2 class="animated fadeInLeftBig third">Bootstrap </h2>
-                    <h2 class="animated fadeInLeftBig fourth">Javascript</h2> 
-                    <h2 class="animated fadeInLeftBig fifth">JQuery</h2>
-                    <h2 class="animated fadeInLeftBig sixth">Angular2</h2>
+        <div class="modal-body">
+          <img src="{% static "images/urbansurf.png" %}" class="img-responsive img-centered" alt="ecomsite">
+          <div class="modalinfo">
+            <p>This website was the final project of the bootcamp - it is almost finished, just a few little
+                tweaks to make. It is a full stack project using Python's Django framework with a mongo 
+                database. It is deployed on Heroku using a Postgres database &amp; Amazon AWS S3 for the 
+                static files.
+            </p>
+            <p> The GitHub Repo can be found <a class="pinky hvr-grow" href="https://github.com/kgmaxwell1990/urban-surf" target="_blank">Here</a>
+            <p> The deployed version can be found <a class="pinky hvr-grow" href="https://katie-dev-urban-surf.herokuapp.com/" target="_blank">Here</a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 
-                </div>
-                <div class="col-sm-4 animated">
-                    <img src="{% static 'images/me2-min-min.jpg' %}" width="300px" id="portrait"/>
-                </div>
-                <div class="col-sm-4 jumbo textright">
-                    <h2 class="animated fadeInRightBig first">Python </h2>
-                    <h2 class="animated fadeInRightBig second">Django </h2>
-                    <h2 class="animated fadeInRightBig third">Flask</h2> 
-                    <h2 class="animated fadeInRightBig fourth">SQL / NoSQL</h2>
-                    <h2 class="animated fadeInRightBig fifth">Git & Github</h2>
-                    <h2 class="animated fadeInRightBig sixth">Deployment</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 scroll-button">
-                    <p class="greyish ubuntu"> Find out More About Me </p>
-                    <a class="page-scroll hvr-pulse" href="#about"><img src="{% static 'images/downarrow.png' %}" width="50px"/></a>
-                </div>
-            </div>
-    </section>
+<!-- 2 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title purpley ubuntu">Flask / JavaScripts D3 / Mongo</h4>
+        </div>
+        <div class="modal-body">
+          <img src="{% static "images/species.png" %}" class="img-responsive img-centered" alt="dashboard">
+          <div class="modalinfo">
+            <p>This is data visualisation website using Python's Flask framework, Mongo database and JavaScript's 
+                D3 library. It is not completed yet.
+            </p>
+            <p> The GitHub Repo can be found <a class="pinky hvr-grow" href="https://github.com/kgmaxwell1990/threatened-species-dashboard" target="_blank">Here</a>
+            <p> The deployed version can be found <a class="pinky hvr-grow" href="http://katie-dev-species-dash.herokuapp.com/" target="_blank">Here</a>
+          </div>        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 
-        <!-- About Section -->
-    <section id="about" class="about-section padding100">
-        <div class="row">
+
+<!-- 3 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal3" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title purpley ubuntu">Static Site</h4>
+        </div>
+        <div class="modal-body">
+          <img src="{% static "images/wedding.png" %}" class="img-responsive img-centered" alt="staticsite">
+          <div class="modalinfo">
+            <p>This was the first project of the course & is a static site using HTML, CSS & JavaScript as well 
+                as JavaScript's library JQuery
+            </p>
+            <p> The GitHub Repo can be found <a class="pinky hvr-grow" href="https://github.com/kgmaxwell1990/Old-Court-Chapel-Weddings" target="_blank">Here</a>
+            {% comment %} <p> The deployed version can be found <a class="pinky hvr-grow" href="http://katie-dev-species-dash.herokuapp.com/" target="_blank">Here</a> {% endcomment %}
+          </div>        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+<!-- 4 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal4" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title purpley ubuntu">Personal Portfolio site built with Django</h4>
+        </div>
+        <div class="modal-body">
+          <img src="{% static "images/thissite.png" %}" class="img-responsive img-centered" alt="thissite">
+          <div class="modalinfo">
+            <p>This site was built using Python's Django framework
+            </p>
+            <p> The GitHub Repo can be found <a class="pinky hvr-grow" href="https://github.com/kgmaxwell1990/portfolio-site" target="_blank">Here</a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+<!-- 5 -->
+<div class="portfolio-modal modal fade" id="portfolioModal5" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title purpley ubuntu">Wedding Venue site built with Django</h4>
+        </div>
+        <div class="modal-body">
+          <img src="{% static "images/occw.png" %}" class="img-responsive img-centered" alt="thissite">
+          <div class="modalinfo">
+            <p>This site was built using Python's Django framework
+            </p>
+            <p> The GitHub Repo can be found <a class="pinky hvr-grow" href="https://github.com/kgmaxwell1990/portfolio-site" target="_blank">Here</a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+<!-- Intro Section -->
+<section class="intro-section" style="background-image: url('{% static 'images/headerpic.jpeg'%}')">
+    <div class="main-info">
+        <div class="col-md-6 col-md-offset-6 ">
+            
+            <h1 class="titleline fadeInLeft">Hi! I'm Katie.<br> I am a Full Stack Web Developer </h1>
+        </div>
+        <div class="col-md-6 col-md-offset-6">
+          <a href="#project-section" class="btn page-scroll view-button">View My Projects</a>
+            <!--<a class="hvr-grow" href="https://www.linkedin.com/in/katie-maxwell-254826a4/" target="_blank"><img src="{% static 'images/Linkedin.png' %}" width="40px"/></a>
+            <a class="hvr-grow" href="https://github.com/kgmaxwell1990" target="_blank"><img src="{% static 'images/Github.png' %}" width="40px"/></a>-->
+        </div>
+    </div>
+</section>
+
+
+<!-- About Section -->
+<section id="about-section" style="background-image: url('{% static 'images/me2-min-min.jpg'%}')">
+  <div id="about-section-info">
+        <h1> About Me</h1>
+
+        <p> I am Katie Maxwell, a Code Institue Graduate with a special interest in front-end Web Design.
+            I am working as the Teaching Assistant on the bootcamp offered by Code Institute until April 2018 so I am 
+            currently on the hunt for my next position.<br>
+            I came from a Sales/Marketing background but found my passion for developing Websites in November 2016
+            &amp; haven't stopped coding since!<br>
+            Completing the bootcamp and and now getting to be the TA on the course has taught me so much
+            - see some of the projects I completed during and after the course
+          <a class="page-scroll pinky hvr-pulse" href="#portfolio-section">HERE</a><br>
+        </p>
+
+        <div class="links">
+            <p><a class="pinky hvr-grow" href="https://www.linkedin.com/in/katie-maxwell-254826a4/">View my Linkedin profile</a></p>
+            <p><a class="pinky hvr-grow" href="https://github.com/kgmaxwell1990">View all my Repos on GitHub</a></p>
+            <p><a href="{% static 'Katie_Maxwell_Resume_pdf.pdf' %}" download target="_blank" class="pinky hvr-grow">Download Resume (pdf)</a></p>
+        </div>
+  </div>
+
+</section>
+
+
+
+<section id="skills-section">
+  <h1>Key Skills </h1>
+  
+  <h4>Languages</h4>
+    <div class="row">
+      <div class="col-sm-3 skill-images">
+        <img src="{% static 'images/html5.png' %}" width="150px">
+      </div>
+      <div class="col-sm-3 skill-images">
+          <img src="{% static 'images/css3.png' %}" width="150px">
+      </div>
+      <div class="col-sm-3 skill-images">
+          <img src="{% static 'images/js.png' %}" width="150px">
+      </div>
+      <div class="col-sm-3 skill-images">
+          <img src="{% static 'images/python.png' %}" width="150px">
+      </div>
+    </div>
+    <h4>Frameworks</h4>
+    <div class="row">
+        <div class="col-sm-4 skill-images">
+          <img src="{% static 'images/angular.png' %}" width="150px">
+        </div>
+        <div class="col-sm-4 skill-images">
+            <img src="{% static 'images/flask.png' %}" width="150px">
+        </div>
+        <div class="col-sm-4 skill-images">
+            <img src="{% static 'images/django.png' %}" width="150px">
+        </div>
+      </div>
+      <h4>Libraries</h4>
+      <div class="row">
+          <div class="col-sm-4 skill-images">
+            <img src="{% static 'images/jquery.png' %}" width="150px">
+          </div>
+          <div class="col-sm-4 skill-images">
+              <img src="{% static 'images/d3.png' %}" width="150px">
+          </div>
+          <div class="col-sm-4 skill-images">
+              <img src="{% static 'images/bootstrap.svg' %}" width="150px">
+          </div>
+        </div>
+ 
+
+  <p> Establishing the purpose of the website based upon its target audience.<br>
+      Creating user friendly Front end projects using HTML, CSS and JavaScript as well as jQuery for animation<br>
+      Using bootstrap for effective and appealing web layouts that are fully responsive<br>
+      Building projects using Angular2 framework that connect with Twitter and Spotify API’s<br>
+      Data Visualisation using JavaScript library d3 for the front end and mongo back end with Python’s Flask framework<br>
+      Creating full stack projects using Python’s Django framework<br>
+      Creating apps in Django for back end website authentication<br>
+      for user registration, login and logout etc, Stripe payments,
+      and creating blogs with staff-only access<br>
+      Testing a website &amp; identifying bugs/technical problems.<br>
+      Data creation, modification and selection using MySQL<br>
+      Deployment to Heroku online server, including using Heroku
+      Postgres database and Amazon AWS for static files.<br>
+      Version control with Git and repository hosting with GitHub
+  </p>
+</section>
+
+<!-- Portfolio Grid Section -->
+<section id="project-section" class="services-section padding100">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1 class="pinky bungee upper">My Work</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 portfolio-item">
+            <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+            <img src="{% static "images/occw.png" %}" class="img-responsive card" alt="oldcourtchapelweddings">
+            </a>
+            <h5 class="greyish ubuntu">Wedding Venue Site</h5>
+            <p>Built with Django <br> Hosted on Heroku <br> Database: Heroku Postgres <br> Static files: AWS S3</p>
+            
+        </div>
+        <div class="col-sm-4 portfolio-item">
+            <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+            <img src="{% static "images/urbansurf.png" %}" class="img-responsive card" alt="ecomsite"/>
+            </a>
+            <p class="greyish ubuntu"> Ecommerce Site with Blog</p>
+        </div>
+        <div class="col-sm-4 portfolio-item">
+            <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+            <img src="{% static "images/species.png" %}" class="img-responsive card" alt="dashboardsite"/>
+            </a>
+            <p class="greyish ubuntu"> Data Visualisation</p>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-sm-4 portfolio-item">
+            <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+            <img src="{% static "images/thissite.png" %}" class="img-responsive card" alt="thissite">
+            </a>
+            <p class="greyish ubuntu"> This Site</p>
+        </div>
+        <div class="col-sm-4 portfolio-item">
+            <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+            <img src="{% static "images/wedding.png" %}" class="img-responsive card" alt="weddingsite"/>
+            </a>
+            <p class="greyish ubuntu"> Static Wedding Venue Site</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact-section" class="contact-section padding20">
+    <div class="row">
             <div class="col-sm-12">
-                <h1 class="bungee upper purpley"> About Me</h1>
+                <h1 class="purpley bungee upper">Contact Me</h1>
             </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 greyish">
+            <p class="upper ubuntu">By Phone </p>
+            <p class="ubuntu"> (+353)851913714 // (+44)7716255847 </p>
+            <p class="upper ubuntu">By Email </p>
+            <p class="ubuntu"> kgmaxwell1990@gmail.com </p>
+            <p class="upper ubuntu">Via Social Media </p>
+            <p>
+            <a class="hvr-grow" href="https://www.facebook.com/katie.maxwell.731" target="_blank"><img src="{% static 'images/Facebook.png' %}" width="35px"/></a>
+            <a class="hvr-grow" href="https://twitter.com/KatieMaxwell261" target="_blank"><img src="{% static 'images/Twitter.png' %}" width="35px"/></a>
+            <a class="hvr-grow" href="https://www.instagram.com/kgmaxwell1990/?hl=en" target="_blank"><img src="{% static 'images/Instagram.png' %}" width="35px"/></a>
+            <a class="hvr-grow" href="https://www.linkedin.com/in/katie-maxwell-254826a4/" target="_blank"><img src="{% static 'images/Linkedin.png' %}" width="35px"/></a>
+            <a class="hvr-grow" href="https://github.com/kgmaxwell1990" target="_blank"><img src="{% static 'images/Github.png' %}" width="35px"/></a>
+            </p>
         </div>
-        <div class="row">
-            <div class="col-sm-12 textcentre about-me">
-                <p> Hi! My name is Katie. I have recently finished the
-                    Code Institute's bootcamp in Software Development! I am currently free
-                    to do some freelance work while looking for a junior developer position.</br>
-                    I came from a Sales/Marketing background but found my passion developing Websites last
-                    year & haven't stopped coding since!</br>
-                    The Bootcamp taught me so much - see just a few of the projects I completed 
-                    over that time <a class="page-scroll pinky hvr-pulse" href="#my-work">HERE</a></br>
-                </p>
-                    <div class="links">
-                        <p><a class="pinky hvr-grow" href="https://www.linkedin.com/in/katie-maxwell-254826a4/">View my Linkedin profile</a></p>
-                        <p><a class="pinky hvr-grow" href="https://github.com/kgmaxwell1990">View all my Repos on GitHub</a></p>
-                        <p><a href="{% static 'Katie_Maxwell_Resume_pdf.pdf' %}" download target="_blank" class="pinky hvr-grow">Download Resume (pdf)</a></p>
-                    </div>
-
-                <h2 class="bungee purpley">Key Skills </h2>
-                <p> Establishing the purpose of the website based upon its target audience.</br>
-                    Creating user friendly Front end projects using HTML, CSS and JavaScript as well as jQuery for animation</br>
-                    Using bootstrap for effective and appealing web layouts that are fully responsive</br>
-                    Building projects using Angular2 framework that connect with Twitter and Spotify API’s</br>
-                    Data Visualisation using JavaScript library d3 for the front end and mongo back end with Python’s Flask framework</br>
-                    Creating full stack projects using Python’s Django framework</br>
-                    Creating apps in Django for back end website authentication</br>
-                    for user registration, login and logout etc, Stripe payments,
-                    and creating blogs with staff-only access</br>
-                    Testing a website & identifying bugs/technical problems.</br>
-                    Data creation, modification and selection using MySQL</br>
-                    Deployment to Heroku online server, including using Heroku
-                    Postgres database and Amazon AWS for static files.</br>
-                    Version control with Git and repository hosting with GitHub
-                </p>
-
-                <div class="scroll-button">
-                    <p class="purpley ubuntu"> See What I Have Been Building </p>
-                    <a class="page-scroll hvr-pulse" href="{% url 'work' %}"><img src="{% static 'images/rightarrow.png' %}" width="50px"></a>
-                </div>
-                <a class="page-scroll right hvr-grow" href="#page-top"><img src="{% static 'images/uparrow.png' %}" width="50px"/></a>
-            </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 greyish">
+            <form role="form" action="{% url 'index' %}" method="POST">
+                {% csrf_token %}
+                {{ form | as_bootstrap }}
+                <button type="submit">Submit</button>
+            </form>
         </div>
-    </section>
+    </div>
+</section>
+
 
 
 
