@@ -18,10 +18,15 @@ section {
     padding: 50px 30px;
     display: block;
 }
-
+h1, h2, h3, h4, h5 {
+    color: black;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 100;
+}
 a {
     text-decoration: none;
 }
+
 
 a:hover { 
     background-color: transparent !important; 
@@ -119,7 +124,8 @@ p {
     margin: 5%;
 }
 
-section h1 {
+section h1 ,
+section h4{
     font-family: dosis, sans-serif;
     color: black;
 }
@@ -136,18 +142,45 @@ section h1 {
     color: black;
     font-family: 'Dosis', sans-serif;
     font-weight: 100;
+    font-size: 50px;
+}
+
+#hi {
+    animation-duration: 3s;
+    -webkit-animation-delay: 1s;
+    -moz-animation-iteration-count: infinite;
+}
+
+#i_am {
+    animation-duration: 3s;
+    -webkit-animation-delay: 2s;
+    -moz-animation-iteration-count: infinite;
+}
+
+#view {
+    animation-duration: 3s;
+    -webkit-animation-delay: 5s;
+    -moz-animation-iteration-count: infinite;
+}
+
+#app2 {
+    height: 33px;
 }
 
 #about-section{
-    background: center right no-repeat fixed;
+    background: center no-repeat;
     background-size: contain;
 }
 
 #about-section-info{  
-    width: 60%;
+    width: 100%;
+    background-color: rgba(252, 252, 252, 0.6);
+    text-align: center;
 }
 
-
+#about-section-info p {
+    color: black;
+}
 .links > p > a {
     font-size: 18px;
     font-weight: 900;
@@ -215,6 +248,7 @@ footer {
 
     .intro-section {
         margin-top: -50px;
+        height: 100vh;
     }
     
     .titleline {
@@ -222,18 +256,40 @@ footer {
         color: black;
         font-family: 'Dosis', sans-serif;
         font-weight: 100;
-       
     }
 
+
+
     .main-info{
-        text-align: right;
+        text-align: left;
         padding-right: 20px;
+        padding-left: 100px;
     }
+    #about-section{
+        background: right no-repeat fixed;
+        background-size: contain;
+    }
+    
+    #about-section-info{  
+        width: 40%;
+        background: none;
+        text-align: left;
+    }
+    
 }
 
 @media screen and (min-width:980px) {
     .navbar-default .navbar-nav>li>a {
         font-size: 22px;
+    }
+    #about-section-info{  
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:1100px) {
+    #about-section-info{  
+        width: 60%;
     }
 }
 
