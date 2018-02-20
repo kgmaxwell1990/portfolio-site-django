@@ -184,9 +184,9 @@
         </p>
 
         <div class="links">
-            <p class="animated slideInLeft wow" data-wow-duration="1s"><a  href="https://www.linkedin.com/in/katie-maxwell-254826a4/">View my Linkedin profile</a></p>
-            <p class="animated slideInLeft wow" data-wow-duration="1s" data-wow-delay="1s"><a class="pinky hvr-grow" href="https://github.com/kgmaxwell1990">View my GitHub Repository</a></p>
-            <p class="animated slideInLeft wow" data-wow-duration="1s" data-wow-delay="2s"><a href="{% static 'Katie_Maxwell_Resume_pdf.pdf' %}" download target="_blank" class="pinky hvr-grow">Download My Resume (pdf)</a></p>
+            <p class="animated slideInLeft wow" data-wow-duration="1s"><a  href="https://www.linkedin.com/in/katie-maxwell-254826a4/" target="_blank">View my Linkedin profile</a></p>
+            <p class="animated slideInLeft wow" data-wow-duration="1s" data-wow-delay="1s"><a class="pinky hvr-grow" href="https://github.com/kgmaxwell1990" target="_blank">View my GitHub Repository</a></p>
+            <p class="animated slideInLeft wow" data-wow-duration="1s" data-wow-delay="2s"><a href="{% static 'Katie_Maxwell_Resume_pdf.pdf' %}" download target="_blank" class="pinky hvr-grow">Download My Resume <i class="fas fa-download"></i></a></p>
         </div>
   </div>
 
@@ -196,11 +196,43 @@
 
 <section id="skills-section">
   <h1>Key Skills </h1>
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="col-sm-9">
-          <h4>Front End</h4>
+  <div class="row main-skills">
+      <div class="col-sm-4">
+          <i class="fas fa-code fa-5x"></i>
+        <h3>Technologies</h3>
+        <p>HTML <br> CSS &amp; Bootstrap <br> JavaScript &amp; jQuery<br> AngularJS <br>d3.js/dc.js<br>
+          Python <br> Flask<br>Django</p>
       </div>
+      <div class="col-sm-4">
+          <i class="fas fa-cogs fa-5x"></i>
+          <h3>Full Stack Development</h3>
+          <p>Incorporating Front &amp; Back End technolgoies to 
+            take a project from wireframe to full deployment.<br>
+            Version control with Git and GitHub <br> 
+            Automated Testing using Jasmine and Django's built in testing framework  <br>
+            Deployment to Heroku and static file hosting with AWS<br>
+            SQL/NoSQL Databases i.e MySQL, Postgres &amp; Mongodb
+
+          </p>
+          <!--<h3>Design</h3>
+          <p>I create fully responsive and animated web applications with UX/UI principles in mind.<br>
+          Basic knowledge of Photoshop for editing images  </p>-->
+
+      </div>
+      <div class="col-sm-4">
+          <i class="fas fa-handshake fa-5x"></i>
+          <h3>Soft Skills</h3>
+          <p>Adaptability <br> Problem Solving <br> Eagerness to Learn<br> Communication <br> 
+            Teamworking<br>Customer service
+          </p>
+          
+
+      </div>
+  </div>
+<!--
+  <i class="fas fa-edit"></i>
+  <i class="fas fa-paper-plane"></i>
+  
       <div class="col-sm-3">
           <img src="{% static 'images/html5.png' %}" width="50px">
           <img src="{% static 'images/css3.png' %}" width="50px">
@@ -224,23 +256,15 @@
   </div>
   
     
- 
 
-  <p> Establishing the purpose of the website based upon its target audience.<br>
-      Creating user friendly Front end projects using HTML, CSS and JavaScript as well as jQuery for animation<br>
-      Using bootstrap for effective and appealing web layouts that are fully responsive<br>
-      Building projects using Angular2 framework that connect with Twitter and Spotify API’s<br>
       Data Visualisation using JavaScript library d3 for the front end and mongo back end with Python’s Flask framework<br>
-      Creating full stack projects using Python’s Django framework<br>
-      Creating apps in Django for back end website authentication<br>
-      for user registration, login and logout etc, Stripe payments,
-      and creating blogs with staff-only access<br>
+
       Testing a website &amp; identifying bugs/technical problems.<br>
       Data creation, modification and selection using MySQL<br>
       Deployment to Heroku online server, including using Heroku
       Postgres database and Amazon AWS for static files.<br>
       Version control with Git and repository hosting with GitHub
-  </p>
+  </p>-->
 </section>
 
 <!-- Portfolio Grid Section -->
