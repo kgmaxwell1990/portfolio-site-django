@@ -135,7 +135,7 @@ section h4{
     color: black;
 }
 
-.intro-section {
+.intro_section {
     background: center center no-repeat;
     background-size: cover;
     margin-top: -80px;
@@ -182,7 +182,7 @@ section h4{
     font-size: 20px;
 }
 
-#about-section{
+#about_section{
     background: center no-repeat;
     background-size: contain;
 }
@@ -197,9 +197,10 @@ section h4{
     color: black;
 }
 
-/* .links{
-    margin-top: 45px;
-} */
+.links{
+    margin-top: 40px;
+    text-align: center;
+}
 
 .links > p > a {
     font-size: 18px;
@@ -207,7 +208,12 @@ section h4{
     
 }
 
-#skills-section {
+.middle-one {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+#skills_section {
     background-color: #F1F1F3;
 
 }
@@ -229,19 +235,41 @@ section h4{
     text-align: center;
 }
 
-#project-section {
+#project_section h1 {
+    margin-bottom: 20px;
+}
+
+
+.portfolio_rows {
+    margin-top: 10px;
+}
+
+.portfolio_item {
+    position: relative;
+    padding-left: 5px;
+    padding-right: 5px;
 
 }
 
-.card {
-    margin: 10px;
-    height: 200px;
+.portfolio_item img {
+    display: block;
     width: 100%;
-    box-shadow: 2px 2px 2px black;
+    height: 190px;
+}
+#contact_section {
+    background-color: #F1F1F3;
+    text-align: center;
 }
 
-#contact-section {
-    background-color: #F1F1F3;
+#contact_section h1{
+    margin-bottom: 20px;
+}
+
+label {
+    font-family: "Dosis", sans-serif;
+    font-size: 25px;
+    font-weight: 100;
+    color: black;
 }
 
 /* -------Footer styling Mobile------ */
@@ -281,7 +309,7 @@ footer {
 
 /* -------Content styling Desktop------ */
 
-    .intro-section {
+    .intro_section {
         margin-top: -50px;
         height: 100vh;
     }
@@ -293,14 +321,12 @@ footer {
         font-weight: 100;
     }
 
-
-
     .main-info{
         text-align: left;
         padding-right: 20px;
         padding-left: 100px;
     }
-    #about-section{
+    #about_section{
         background: right no-repeat fixed;
         background-size: contain;
     }
@@ -315,6 +341,41 @@ footer {
         margin-top: 30px;
         margin-bottom: 30px;
     }
+
+
+
+    .overlay {
+        z-index: 300;
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(225,225,225,0.6);
+        overflow: hidden;
+        width: 100%;
+        height:0;
+        transition: .5s ease;
+      }
+    
+    .portfolio_item:hover .overlay {
+        bottom: 0;
+        height: 100%;
+      }
+    
+    .picture_text {
+        color: black;
+        border: 1px solid black;
+        background-color:rgba(255,255,255,0.8);
+        padding: 5px;
+        font-size: 20px;
+        font-weight: 900;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+      }
     
 }
 
