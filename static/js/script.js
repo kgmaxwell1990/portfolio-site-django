@@ -9,7 +9,7 @@ $(document).ready(function(){
     
     var typewriter1 = new Typewriter(app, {
         loop: false,
-        cursor: "",
+        cursor: "|",
         typingSpeed: 30
         
     });
@@ -24,7 +24,7 @@ $(document).ready(function(){
         .typeString('I am a Full Stack Developer')
         .start();
 
-    typewriter2.pauseFor(5000)
+    typewriter2.pauseFor(4000)
       .typeString('I code using ')
       .typeString('HTML')
       .pauseFor(1500)
