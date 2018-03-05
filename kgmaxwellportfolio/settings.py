@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', False)
 
-ALLOWED_HOSTS = ['katie-dev-portfolio.herokuapp.com', '127.0.0.1', 'www.kgmaxwell.com', 'www.kgmaxwell.com.herokudns.com']
+ALLOWED_HOSTS = ['katie-dev-portfolio.herokuapp.com', '127.0.0.1', 'www.kgmaxwell.com', 'kgmaxwell.com', 'www.kgmaxwell.com.herokudns.com']
 INTERNAL_IPS = ['127.0.0.1']
 
 
