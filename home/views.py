@@ -16,34 +16,40 @@ def get_index(request):
         form = form_class(data=request.POST)
 
         if form.is_valid():
-            contact_name = request.POST.get('contact_name', '')
-            contact_email = request.POST.get('contact_email', '')
-            form_content = request.POST.get('content', '')
+            try:
+                contact_name = request.POST.get('contact_name', '')
+                contact_email = request.POST.get('contact_email', '')
+                form_content = request.POST.get('content', '')
 
-            template=get_template('contact_template.txt')
-            context = {
-                'contact_name': contact_name,
-                'contact_email': contact_email,
-                'form_content': form_content,
-            }
-            content = template.render(context)
+                template=get_template('contact_template.txt')
+                context = {
+                    'contact_name': contact_name,
+                    'contact_email': contact_email,
+                    'form_content': form_content,
+                }
+                content = template.render(context)
+                
+                subject = 'Thanks for getting in touch!'
+                message = 'I Will get back to you asap'
+                from_email = settings.EMAIL_HOST_USER
+                to_email = [contact_email]
+
+                send_mail(subject,message,from_email,to_email,fail_silently=False)
+
+                email = EmailMessage(
+                    "New contact form message",
+                    content,
+                    "Your website" +'',
+                    ['kgmaxwell1990@gmail.com'],
+                    headers = {'Reply-To': contact_email }
+                )
+                email.send()
+                messages.success(request, 'I have received your email & will get back to you ASAP! :)')
+            except Exception as e:
+                print(e)
+                messages.success(request, 'Shit')
             
-            subject = 'Thanks for getting in touch!'
-            message = 'Will get back to you asap'
-            from_email = settings.EMAIL_HOST_USER
-            to_email = [contact_email]
 
-            send_mail(subject,message,from_email,to_email,fail_silently=True)
-
-            email = EmailMessage(
-                "New contact form message",
-                content,
-                "Your website" +'',
-                ['kgmaxwell1990@gmail.com'],
-                headers = {'Reply-To': contact_email }
-            )
-            email.send()
-            messages.success(request, 'I have received your email & will get back to you ASAP! :)')
             return redirect('index')
 
     return render(request, 'index.html', {'form': form_class})

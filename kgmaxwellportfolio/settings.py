@@ -41,20 +41,20 @@ INTERNAL_IPS = ['127.0.0.1']
 
 
 #gmail
-EMAIL_USE_TLS = True       
-EMAIL_HOST = 'smtp.gmail.com'      
-EMAIL_PORT = 587     
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')     
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')  
+# EMAIL_USE_TLS = True       
+# EMAIL_HOST = 'smtp.gmail.com'      
+# EMAIL_PORT = 587     
+# EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')     
+# EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')  
 #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
 #sendgrid
-# EMAIL_HOST = 'smtp.sendgrid.net'
-# EMAIL_HOST_USER = os.environ.get('SENDGRID_USERNAME')
-# EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_PASSWORD')
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = os.environ.get('SENDGRID_USERNAME')
+EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_PASSWORD')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 
 
