@@ -5,11 +5,12 @@ from django.template import Context
 from django.template.loader import get_template
 from .forms import ContactForm
 from django.contrib import messages, auth
-
+from .models import Projects
 
 # Create your views here.
 
 def get_index(request):
+    projects = Projects.objects.all()
     form_class = ContactForm
 
     if request.method == 'POST':
@@ -52,7 +53,7 @@ def get_index(request):
 
             return redirect('index')
 
-    return render(request, 'index.html', {'form': form_class})
+    return render(request, 'index.html', {'form': form_class, 'projects':projects})
 
 
 

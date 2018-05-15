@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.views import static
+from .settings import MEDIA_ROOT
 from home.views import get_index
 from blog import urls as blog_urls
 
@@ -22,5 +24,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', get_index, name="index"),
     url(r'^blog/', include(blog_urls)),
+    url(r'^media/(?P<path>.*)$', static.serve,{'document_root': MEDIA_ROOT}),
     
 ]

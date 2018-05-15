@@ -279,8 +279,7 @@ section h4{
 
 .portfolio_item {
     position: relative;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 5px;
 }
 
 .portfolio_item img {

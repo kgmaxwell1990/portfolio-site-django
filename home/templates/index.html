@@ -5,27 +5,26 @@
 {% block content %}
 
 <!-- Portfolio Modals -->
-<!-- 1 -->
-<div class="portfolio-modal modal fade" id="portfolioModal1" role="dialog">
+{% for project in projects %}
+<div class="portfolio-modal modal fade" id="portfolioModal{{project.id}}" role="dialog">
   <div class="modal-dialog">
-  
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Wedding Venue</h4>
+        <h4 class="modal-title">{{project.name}}</h4>
       </div>
       <div class="modal-body">
-        <img src="{% static "images/occw.png" %}" class="img-responsive img-centered" alt="thissite">
+        <img src="{{MEDIA_URL}}{{project.image}}" class="img-responsive img-centered" alt="{{project.image_description}}">
         <div class="modalinfo">
-          <p>First Freelance project <br>
-            Built with Django <br> 
-            Hosted on Heroku <br> 
-            Database: Heroku Postgres <br> 
-            Static files: AWS S3</p>
-            <button class="btn btn-warning live_button"><a href="http://oldcourtchapelweddings.co.uk" target="_blank">VIEW LIVE VERSION</a></button>  
-          <button class="btn btn-success git_button"><a href="https://github.com/kgmaxwell1990/old-court-chapel-weddings-django" target="_blank">VIEW GITHUB REPO</a></button>
-        </div>
+          <p>{{project.description}}</p>
+            {% if project.live_link %}
+            <button class="btn btn-warning live_button"><a href="{{project.live_link}}" target="_blank">VIEW LIVE VERSION</a></button> 
+            {% endif %} 
+            {% if project.github_link %}
+          <button class="btn btn-success git_button"><a href="{{project.github_link}}" target="_blank">VIEW GITHUB REPO</a></button>
+          {% endif %}
+          </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -34,163 +33,7 @@
     
   </div>
 </div>
-
-
-
-<!-- 2 -->
-<div class="portfolio-modal modal fade" id="portfolioModal2" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Ecommerce Site</h4>
-        </div>
-        <div class="modal-body">
-          <img src="{% static "images/urbansurf.png" %}" class="img-responsive img-centered" alt="ecomsite">
-          <div class="modalinfo">
-            <p>Built with Django for final project<br> 
-              Fully functioning Ecommerce site enabling users to Register/Login 
-              and have their own profile. They can browse, search and purchase products using Stripe Payments.<br>
-              There is also a blog for users to read. <br>
-              When the contact form is completed the user will recieve a confirmation email.
-              Hosted on Heroku <br> 
-              Database: Heroku Postgres <br> 
-              Static files: AWS S3</p>
-              <button class="btn btn-warning live_button"><a href="https://katie-dev-urban-surf.herokuapp.com/" target="_blank">VIEW LIVE VERSION</a></button>
-            <button class="btn btn-success git_button"><a href="https://github.com/kgmaxwell1990/urban-surf-django" target="_blank">VIEW GITHUB REPO</a></button>
-
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-
-<!-- 3 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal3" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Data Visualisation</h4>
-        </div>
-        <div class="modal-body">
-          <img src="{% static "images/species.png" %}" class="img-responsive img-centered" alt="dashboard">
-          <div class="modalinfo">
-              <p>Python's Flask framework was used<br> 
-                Javascript Libraries for building the graphs: d3.js, dc.js, crossfilter.js &amp; queue.js<br>
-                Hosted on Heroku <br> 
-                Database: MongoDB <br> 
-                Static files: AWS S3</p>
-                <button class="btn btn-warning live_button"><a href="http://katie-dev-species-dash.herokuapp.com/" target="_blank">VIEW LIVE VERSION</a></button>
-              <button class="btn btn-success git_button"><a href="https://github.com/kgmaxwell1990/threatened-species-dashboard-d3-flask" target="_blank">VIEW GITHUB REPO</a></button>
-          </div>        
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-
-
-<!-- 4 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal4" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Static Site</h4>
-        </div>
-        <div class="modal-body">
-          <img src="{% static "images/georgy.png" %}" class="img-responsive img-centered" alt="staticsite">
-          <div class="modalinfo">
-            <p>Built using HTML, CSS and JavaScript/jQuery<br>
-              Hosted on GitHub Pages
-            </p>
-            <button class="btn btn-warning live_button"><a href="https://kgmaxwell1990.github.io/georgiana-de-ros-static/" target="_blank">VIEW LIVE VERSION</a></button>
-            <button class="btn btn-success git_button"><a href="https://github.com/kgmaxwell1990/georgiana-de-ros-static" target="_blank">VIEW GITHUB REPO</a></button>
-          </div>        
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-
-<!-- 5 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal5" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">This Site</h4>
-        </div>
-        <div class="modal-body">
-          <img src="{% static "images/portfoliosite.png" %}" class="img-responsive img-centered" alt="thissite">
-          <div class="modalinfo">
-              <p>
-                Built with Django <br> 
-                Hosted on Heroku <br> 
-                Database: Heroku Postgres <br> 
-                Static files: AWS S3</p>
-            <button class="btn btn-success git_button"><a href="https://github.com/kgmaxwell1990/portfolio-site" target="_blank">VIEW GITHUB REPO</a></button>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-
-<!-- 6 -->
-
-<!--
-<div class="portfolio-modal modal fade" id="portfolioModal6" role="dialog">
-    <div class="modal-dialog">
-
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">This Site</h4>
-        </div>
-        <div class="modal-body">
-          <img src="{% static "images/thissite.png" %}" class="img-responsive img-centered" alt="thissite">
-          <div class="modalinfo">
-              <p>
-                Built with Django <br> 
-                Hosted on Heroku <br> 
-                Database: Heroku Postgres <br> 
-                Static files: AWS S3</p>
-            <p><a href="https://github.com/kgmaxwell1990/portfolio-site" target="_blank">View GitHub Repo</a>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
--->
-
-
+{% endfor %}
 
 <!-- Intro Section -->
 <section class="intro_section" style="background-image: url('{% static 'images/headerpic.jpeg'%}')">
@@ -203,11 +46,7 @@
       </div>
     </div>
   </div>
-  <!--<div class="down_arrow">
-      <i class="fas fa-chevron-down fa-3x"></i>
-  </div>-->
 </section>
-
 
 <!-- About Section -->
 <section id="about_section" style="background-image: url('{% static 'images/me2-min-min.jpg'%}')">
@@ -246,8 +85,7 @@
   </div>
 </section>
 
-
-
+<!-- Skills Section -->
 <section id="skills_section" class="middle">
   <h1>Key Skills </h1>
   <div class="row main_skills">
@@ -266,12 +104,7 @@
             Automated Testing using Jasmine and Django's built in testing framework  <br>
             Deployment to Heroku and static file hosting with AWS<br>
             SQL/NoSQL Databases: MySQL, SQLite PostgreSQL &amp; MongoDB
-
           </p>
-          <!--<h3>Design</h3>
-          <p>I create fully responsive and animated web applications with UX/UI principles in mind.<br>
-          Basic knowledge of Photoshop for editing images  </p>-->
-
       </div>
       <div class="col-sm-4 animated slideInRight wow" data-wow-duration="1s" data-wow-delay=".5s">
           <i class="fas fa-handshake fa-5x"></i>
@@ -279,111 +112,26 @@
           <p>Adaptability <br> Problem Solving <br> Eagerness to Learn<br> Communication <br> 
             Teamworking<br>Customer service<br>Time Management
           </p>
-          
-
       </div>
   </div>
-<!--
-  <i class="fas fa-edit"></i>
-  <i class="fas fa-paper-plane"></i>
-  
-      <div class="col-sm-3">
-          <img src="{% static 'images/html5.png' %}" width="50px">
-          <img src="{% static 'images/css3.png' %}" width="50px">
-          <img src="{% static 'images/js.png' %}" width="50px">
-          <img src="{% static 'images/angular.png' %}" width="50px">
-          <img src="{% static 'images/jquery.png' %}" width="50px">
-          <img src="{% static 'images/d3.png' %}" width="50px">
-          <img src="{% static 'images/bootstrap.svg' %}" width="50px">
-      </div>
-    </div>
-    <div class="col-sm-6">
-        <div class="col-sm-3">
-            <img src="{% static 'images/python.png' %}" width="50px">
-            <img src="{% static 'images/flask.png' %}" width="50px">
-            <img src="{% static 'images/django.png' %}" width="50px">
-        </div>
-        <div class="col-sm-9">
-            <h4>Frameworks</h4>
-        </div>
-      </div>
-  </div>-->
 </section>
-
-
-
 
 <!-- Portfolio Grid Section -->
 <section id="project_section" class="middle">
     <h1>My Work</h1>
     <div class="row portfolio_rows">
+        {% for project in projects %}
         <div class="col-sm-4 portfolio_item">
-          <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-            <img src="{% static "images/occw.png" %}" alt="oldcourtchapelweddings">
+          <a href="#portfolioModal{{project.id}}" class="portfolio-link" data-toggle="modal">
+            <img src="{{MEDIA_URL}}{{project.image}}" alt="{{project.image_description}}">
             
             <div class="overlay">
-              <h5 class="picture_text">Wedding Venue</h5>
+              <h5 class="picture_text">{{project.name}}</h5>
             </div>
             </a>
         </div>
-        <div class="col-sm-4 portfolio_item">
-          <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-            <img src="{% static "images/urbansurf.png" %}" alt="ecomsite"/>
-            <div class="overlay">
-              <h5 class="picture_text">Ecommerce Site</h5>
-            </div>
-          </a>
-        </div>
-        <div class="col-sm-4 portfolio_item">
-          <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-            <img src="{% static "images/species.png" %}" alt="dashboardsite"/>
-            <div class="overlay">
-              <h5 class="picture_text">Data Visualisation</h5>
-            </div>
-          </a>
-        </div>
+        {% endfor %}
     </div>
-    <div class="row portfolio_rows">
-      <div class="col-sm-4 portfolio_item">
-        <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-          <img src="{% static "images/georgy.png" %}" alt="georgysite">
-          
-          <div class="overlay">
-            <h5 class="picture_text">Static Site</h5>
-          </div>
-          </a>
-      </div>
-      <div class="col-sm-4 portfolio_item">
-        <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-          <img src="{% static "images/portfoliosite.png" %}" alt="portfolio site"/>
-          <div class="overlay">
-            <h5 class="picture_text">This Site</h5>
-          </div>
-        </a>
-      </div>
-      <!--<div class="col-sm-4 portfolio_item">
-        <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-          <img src="{% static "images/species.png" %}" alt="dashboardsite"/>
-          <div class="overlay">
-            <h5 class="picture_text">Data Visualisation</h5>
-          </div>
-        </a>
-      </div>-->
-  </div>
-    <!--<div class="row">
-        <div class="col-sm-4 portfolio-item">
-            <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-            <img src="{% static "images/thissite.png" %}" class="img-responsive card" alt="thissite">
-            </a>
-            <p class="greyish ubuntu"> This Site</p>
-        </div>
-        <div class="col-sm-4 portfolio-item">
-            <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-            <img src="{% static "images/wedding.png" %}" class="img-responsive card" alt="weddingsite"/>
-            </a>
-            <p class="greyish ubuntu"> Static Wedding Venue Site</p>
-        </div>
-    </div>-->
 </section>
 
 <!-- Contact Section -->
@@ -413,13 +161,6 @@
     </div>
 </section>
 
-
-
-
 </div>
-
-
-
-
 
 {% endblock content %}
