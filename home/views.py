@@ -10,7 +10,7 @@ from .models import Projects
 # Create your views here.
 
 def get_index(request):
-    projects = Projects.objects.all()
+    projects = Projects.objects.filter().order_by('order_number')
     form_class = ContactForm
 
     if request.method == 'POST':
