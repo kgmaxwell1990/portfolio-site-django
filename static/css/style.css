@@ -206,6 +206,10 @@ section h4{
     color: black;
 }
 
+#about_section_info > p > a {
+    color: #3641C5;
+}
+
 .links{
     text-align: center;
 }
