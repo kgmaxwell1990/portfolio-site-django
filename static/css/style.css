@@ -129,6 +129,14 @@ p {
     margin: 5%;
 }
 
+.tech_buttons {
+    display: inline-block;
+    border: 2px solid gray;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3), 0 3px 10px 0 rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    border-radius: 5px;
+}
+
 section h1 ,
 section h4{
     font-family: dosis, sans-serif;
@@ -290,7 +298,6 @@ section h4{
     width: 100%;
     height: 220px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3), 0 3px 10px 0 rgba(0, 0, 0, 0.3);
-
 }
 
 .overlay {

@@ -17,7 +17,13 @@
       <div class="modal-body">
         <img src="{{MEDIA_URL}}{{project.image}}" class="img-responsive img-centered" alt="{{project.image_description}}">
         <div class="modalinfo">
-          <p>{{project.description}}</p>
+            {% for t in project.project_technologies.all %}
+            <span class="tech_buttons">{{t.tech}}</span>
+          {% endfor %}
+          <br>
+          <br>
+          <p>{{project.description|linebreaks}}</p>
+
             {% if project.live_link %}
             <button class="btn btn-warning live_button"><a href="{{project.live_link}}" target="_blank">VIEW LIVE VERSION</a></button> 
             {% endif %} 

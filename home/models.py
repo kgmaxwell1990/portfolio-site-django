@@ -13,3 +13,7 @@ class Projects(models.Model):
 
     def __str__(self):
         return self.name
+
+class ProjectTechnologies(models.Model):
+    project_name = models.ForeignKey(Projects, related_name='project_technologies')
+    tech = models.CharField(max_length=254, default='', blank=True)
